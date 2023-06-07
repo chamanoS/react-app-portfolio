@@ -17,7 +17,7 @@ const Experience = () => {
         <div className="mt-14 w-full h-[1000px] border-l-[6px] border-l-black border-opacity-30 flex flex-col gap-10">
           <ResumeCard
             title="Software Developer Intern"
-            subTitle="Application developer - The Digital Academy (2019 - 2020"
+            subTitle="Application developer - The Digital Academy (2019 - 2020)"
             result="Johanessburg"
             des="As a frontend developer intern, I gained valuable experience working with MEAN stack technology, contributing to the development of business applications and app presentations. I actively participated in real-life business projects, applying my skills in creating interactive and engaging user interfaces."
           />
