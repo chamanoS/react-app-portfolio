@@ -12,8 +12,8 @@ const Resume = () => {
       <div className="flex justify-center items-center text-center">
         <Title title="3+ YEARS OF EXPERIENCE" des="My Resume" />
       </div>
-      <div>
-        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+      <div className="flex justify-center items-center text-center">
+        <ul className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 center:flex justify-center items-center">
           <li
             onClick={() =>
               setSkillData(true) &
