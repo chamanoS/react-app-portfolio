@@ -28,18 +28,27 @@ const ContactLeft = () => {
       <div className="flex flex-col gap-4">
         <h2 className="text-base uppercase font-titleFont mb-4">Find me in</h2>
         <div className="flex gap-4">
-            <span className="bannerIcon">
-              <FaDev/>
-            </span>
-            <span className="bannerIcon">
-              <FaGithub />
-            </span>
-            <span className="bannerIcon">
-              <FaLinkedinIn />
-            </span>
-            <span className="bannerIcon">
-              <FaDribbble/>
-            </span>
+            <a href="https://dev.to/chamanos" rel="noreferrer" target="_blank">
+              <span className="bannerIcon">
+                <FaDev />
+              </span>
+            </a>
+
+            <a href="https://github.com/chamanoS" rel="noreferrer" target="_blank">
+              <span className="bannerIcon">
+                <FaGithub />
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/chamano-sidney-3b343611a/" rel="noreferrer" target="_blank">
+              <span className="bannerIcon">
+                <FaLinkedinIn />
+              </span>
+            </a>
+            <a href="https://dribbble.com/chamano" rel="noreferrer" target="_blank">
+              <span className="bannerIcon">
+                <FaDribbble />
+              </span>
+            </a>
           </div>
       </div>
     </div>
