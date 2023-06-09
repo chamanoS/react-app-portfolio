@@ -12,11 +12,11 @@ const Contact = () => {
   const [successMsg, setSuccessMsg] = useState("");
 
   // ========== Email Validation start here ==============
-  const emailValidation = () => {
-    return String(email)
-      .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
-  };
+  // const emailValidation = () => {
+  //   return String(email)
+  //     .toLocaleLowerCase()
+  //     .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+  // };
   // ========== Email Validation end here ================
 
   const handleSend = (e) => {
@@ -27,8 +27,6 @@ const Contact = () => {
       setErrMsg("Phone number is required!");
     } else if (email === "") {
       setErrMsg("Please give your Email!");
-    } else if (!emailValidation(email)) {
-      setErrMsg("Give a valid Email!");
     } else if (subject === "") {
       setErrMsg("Plese give your Subject!");
     } else if (message === "") {
@@ -57,7 +55,12 @@ const Contact = () => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
+            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5" 
+                id="contact-form"
+                name="RegForm"
+                method="POST"
+                action="https://formspree.io/f/mjvpyorl"
+                onsubmit="return validation()">
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -143,6 +146,9 @@ const Contact = () => {
               <div className="w-full">
                 <button
                   onClick={handleSend}
+                  type="submit"
+                  class="btn btn-style btn-primary btn-block btn-lg mt-3"
+                  target="_blank"
                   className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
                 >
                   Send Message
